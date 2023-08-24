@@ -1,0 +1,13 @@
+<google-map [center]="center">
+
+  <!--controllo del bottone-->
+  <div *ngIf = "accendi">
+    <map-marker *ngFor="let m of markers; let i = index" [position]="{'lat': m.lat, 'lng': m.lng}"
+      [options]="markerOptions"></map-marker>
+  </div>
+</google-map>
+<button (click)="mostra()">show</button>
+<button (click)="mostrathor()">thor</button>
+<button (click)="mostraspider()">spider</button>
+<button (click)="mostracapitan()">capitan</button>
+<button (click)="mostrairon()">iron</button>
